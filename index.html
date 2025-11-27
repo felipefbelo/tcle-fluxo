@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário Letramento Digital</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="container--title">CURSO: Navegação Segura: Como Evitar Armadilhas e Golpes na Internet</p>
+        <p class="container--subtitle">Letramento Digital e suas implicações numa Internet mais segura, ética e privada</p>
+
+        <p class="container--text">
+            Este projeto caracteriza-se como um estudo de intervenção educacional, com delineamento quase-experimental, do tipo antes e depois, de abordagem quantitativa e qualitativa. O objetivo é avaliar a eficácia de uma intervenção educativa online na ampliação do letramento digital e na capacidade de prevenção a fraudes e golpes online entre os participantes. A pesquisa será realizada de forma prospectiva, acompanhando os participantes ao longo da intervenção.
+        </p>
+        <p class="container--text">
+            Os benefícios diretos para os participantes incluem a capacitação e o letramento digital, o aumento da percepção de risco e o desenvolvimento de habilidades práticas para se protegerem de fraudes online, promovendo maior segurança e autonomia no exercício de sua cidadania digital. Para a sociedade, o projeto beneficia-se ao gerar dados sobre a eficácia de intervenções educativas, podendo nortear futuras políticas públicas de segurança digital.
+        </p>
+
+        <div style="display: flex; justify-content: end;">
+            <button class="container--button">Continuar</button>
+        </div>
+    </div>
+    <script>
+        let page = 0
+        function changeContent() {
+            const container = document.querySelector('.container');
+            container.querySelectorAll('.container--text').forEach((p) => p.remove())
+            document.querySelector('.container--button').remove()
+
+            const div = document.createElement('div')
+            div.innerHTML =
+`
+<p style="margin-top: 1rem;">
+Você está sendo convidado(a) para participar, de forma voluntária, da pesquisa intitulada <b>"Cidadania Digital: Conscientização e Prevenção de Golpes Online"</b>, que integra o curso de extensão online gratuito <b>"Navegação Segura: Como Evitar Armadilhas e Golpes na Internet"</b>. Esta pesquisa é conduzida por Felipe Fonteles Belo mestrando(a) do Programa de Pós-Graduação em Computação Aplicada da Universidade Federal de Mato Grosso (UFMT), com aprovação do Comitê de Ética em Pesquisa (CAAE: 91096125.9.0000.5690).
+</p>
+<p style="margin-top: 1rem;">
+<b>JUSTIFICATIVA/OBJETIVOS/PROCEDIMENTOS:</b> Este estudo avaliará se um curso on-line de 20h melhora o conhecimento sobre golpes digitais. Se você aceitar participar, primeiro lerá e aceitará este TCLE. Em seguida, responderá a um <b>questionário sociodemográfico</b> e a um <b>pré-teste</b>; fará o curso no Moodle (4 módulos, assíncrono); ao final, responderá a um <b>pós-teste</b> e um <b>questionário de satisfação</b>.
+</p>
+
+<p style="margin-top: 2rem;">
+<b>Riscos e Benefícios:</b>
+</p>
+
+<p style="margin-top: 1rem;">
+<b>BENEFÍCIOS (diretos/indiretos):</b> Você poderá aprender práticas de proteção e reconhecer golpes com mais facilidade; indiretamente, os resultados ajudarão a melhorar ações educativas e políticas públicas.
+</p>
+
+<p style="margin-top: 1rem;">
+    <b>RISCOS POTENCIAIS AO PARTICIPANTE (DESCRITOS OBJETIVAMENTE):</b>
+</p>
+<p>a) Desconforto emocional ao relembrar golpes/erros ou reconhecer vulnerabilidades;</p>
+<p>b) Exposição indesejada de dados pessoais caso a conta do participante em dispositivos públicos/compartilhados permaneça autenticada;</p>
+<p>c) Risco residual de confidencialidade inerente a serviços on-line (falhas técnicas, acesso não autorizado).</p>
+<p>MEDIDAS DE MITIGAÇÃO:</p>
+<p>1.	Linguagem neutra e não julgadora nos instrumentos; possibilidade de pular perguntas sem prejuízo;</p>
+<p>2.	Orientação explícita para acessar o Moodle em dispositivo/ambiente confiável, encerrar sessão e limpar cache ao finalizar;</p>
+<p>3.	Criptografia em trânsito (HTTPS); perfis com acesso mínimo; pseudoanonimização na extração analítica; armazenamento em repositório institucional; sem plugins de terceiros que coletem dados para fins comerciais;</p>
+<p>4.	Canal de suporte para relatos de desconforto, inclusive com encaminhamento à rede institucional quando necessário;</p>
+<p>5.	Procedimentos de gestão de incidentes (registro, comunicação ao CEP quando aplicável).</p>
+<p style="margin-top: 1rem;">OBS.: Riscos e salvaguardas estão aderentes às Res. 466/2012 e 510/2016 (respeito, sigilo, autonomia) e às orientações Ofício 2/2021 para ambiente virtual.</p>
+<p style="margin-top: 1rem;"><b>ACOMPANHAMENTO/ASSISTÊNCIA:</b> Caso sinta desconforto, poderá interromper imediatamente e solicitar apoio via canal de contato do estudo; se necessário, haverá encaminhamento para atendimento institucional.</p>
+<p style="margin-top: 1rem;"><b>LIBERDADE E RETIRADA:</b> Sua participação é voluntária; você pode recusar ou retirar seu consentimento a qualquer momento, sem qualquer prejuízo.</p>
+<p style="margin-top: 1rem;"><b>SIGILO/PRIVACIDADE:</b> Usaremos apenas o Moodle; não compartilharemos dados com terceiros para fins comerciais; seus dados serão pseudonimizados na análise e apresentados de forma agregada. Há limites técnicos à confidencialidade no ambiente on-line, mas aplicaremos medidas de segurança </p>
+<p style="margin-top: 1rem;"><b>ACESSO AOS RESULTADOS:</b> Em até 60 dias após a finalização do curso, enviaremos um resumo dos achados por e-mail e publicaremos uma nota no site do curso.</p>
+<p style="margin-top: 1rem;"><b>ACESSO AO REGISTRO DO CONSENTIMENTO:</b> Você poderá solicitar e receber cópia do seu aceite eletrônico a qualquer momento.</p>
+<p style="margin-top: 1rem;"><b>CONTATOS DO PESQUISADOR:</b> Felipe Fonteles Belo, email: felipebelo@live.com, Nelcileno Virgilio, email: nelcileno.araujo@ufmt.br</p>
+
+<p style="margin-top: 1rem;"><b>PAPEL DO CEP e CONTATOS:</b> O CEP/Humanidades/UFMT salvaguarda a conduta ética das pesquisas. Se você entender que este estudo não está seguindo este TCLE ou se sentir prejudicado, poderá contatar: Coordenadora: Paola Biasoli Alves; Endereço: Andar Térreo – sala 102 – Instituto de Educação – UFMT; E-mail: cephumanidades.propeq@ufmt.br; WhatsApp: (65) 99243-8072; Horário: 08h–12h / 14h–18h.</p>
+<p style="margin-top: 1rem;"><b>Ao marcar a opção “Li e concordo com os termos acima”, você confirma que é maior de 18 anos e que leu este termo, entendeu seu conteúdo e aceita participar da pesquisa.</b></p>
+<input type="checkbox" id="consentCheckbox" required>
+<label for="consentCheckbox">Li e concordo com os termos acima.</label>
+<br />
+<button class="container--button">Prosseguir</button>
+`
+            container.appendChild(div)
+
+            document.querySelector('.container--button').onclick = () => {
+                if (!document.getElementById('consentCheckbox').checked) {
+                    alert('Por favor, leia e concorde com os termos para prosseguir.')
+                    return
+                }
+                window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSebL9haF3XqVRHKavb6SoLX9JHH9On43GmtXENd5LNnHYCvKw/viewform'
+            }
+        }
+
+        document.querySelector('.container--button').addEventListener('click', changeContent);
+    </script>
+</body>
+</html>
